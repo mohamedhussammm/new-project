@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   background: rgba(0, 0, 0, 0.7) url(../photos/food2.webp)  fixed;
+   background-size: cover;
+   background-blend-mode: darken;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.container h1{
+    color: orangered;
+    margin-left: 15px;
+    cursor: pointer;
+   position: fixed;
+   top: 30px;
+}
+
+.navbar ul li{
+    display: inline-block;
+    padding: 25px;
+    text-transform: uppercase;
+}
+
+.navbar ul li a{
+
+    text-decoration: none;
+    color: #fff;
+    padding: 4px;
+    transition: .5s;
+
+
+}
+
+
+
+ul li i:hover{
+    box-shadow: 0 3px 50px orangered inset,0 3px 50px orangered inset,0 3px 50px orangered inset,0 3px 50px orangered inset;
+    cursor: pointer;
+border-radius: 4px;
+}
+
+
+
+
+
+
+.navbar ul li a:hover{
+    border-radius: 6px;
+    box-shadow: 0 3px 50px orangered inset,0 3px 50px orangered inset,0 3px 50px orangered inset,0 3px 50px orangered inset;
+
+}
+.navbar  .sign {
+    padding: 10px;
+    background-color: orangered;
+
+}
+
+.navbar{
+    position:fixed;
+    z-index: 1;
+  left: 250px;
+  top: 10px;
+  
+}
+.search{
+   
+    background: #fff;
+    width: 250px;
+    height: 20px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 20px 0 0 20px;
+    
+    }.content{
+        position: absolute;
+        color: #fff;
+        top: 40%;
+        left: 30%;
+    }
+    
+    .content h3{
+        
+        font-family: sans-serif;
+        font-size: 30px;
+        
+    
+    }
+    
+    .content h1{
+        font-size: 50px;
+        
+    }
+    
+    .content p{
+        text-align: center;
+        margin-top: 17px;
+        margin-right: 250px;
+       
+    
+    }
+    .content button {
+        background: none;
+        border: 1px solid #fff;
+        border-color: orangered;
+        margin-top: 50px;
+        margin-left: 200px;
+        color: #fff;
+        padding: 20px;
+        font-size: 25px;
+        border-radius: 6px;
+        transition: 0.5s all ease;
+       
+    }
+    button:hover{
+        background-color: orangered;
+        color:black;
+        cursor: pointer;
+        
+    }
+    .food{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 700px;
+        color: #fff;
+    }
+    
+    .food h1{
+        font-size: 36px;
+        font-weight: 600p;
+    } 
+    
+    
+    .row{
+        margin-top: 5%;
+        justify-content: space-between;
+        display: flex;
+    
+    }
+    .foodcol{
+        flex-basis: 31%;
+        background: orangered;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        
+    }
+    
+    .foodcol h3{
+        text-align: center;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+    
+    .foodcol:hover{
+        box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.853);
+    
+    }
+    .dishes{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+        color: #fff;
+        font-size: 25px;
+        font-weight: 500p;
+    
+    }
+    
+    .foodcol2{
+        flex-basis: 32%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+    
+    }
+    
+    .foodcol2 img{
+        width: 100%;
+        display: block;
+    
+    }
+    
+    .layer{
+        background:transparent;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+    }
+    
+    .layer:hover{
+        background:rgb(0, 0,0,0.7);
+    
+    }
+    
+    .layer h3{
+        width: 100%;
+        font-weight: 500;
+        color: orangered;
+        font-size: 26px;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        opacity: 0;
+        transition: 0.5s;
+        
+    }
+    
+    .layer:hover h3{
+         bottom: 49%;
+         opacity: 1;
+    }.problems{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+    }
+    
+    .problems h1{
+        color: #fff;
+    
+    }
+    
+    .problems p{
+    
+        color: #fff
+    }
+    
+    
+    .foodcol3{
+        flex-basis: 31%;
+        border-radius: 10px;
+        margin-bottom: 5%;text-align: left;
+    
+    }
+    
+    .foodcol3 img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    
+    .foodcol3 p{
+        padding: 0;
+        color: #fff
+    
+    }
+    
+    .foodcol3 h3{
+       
+        color:orangered;
+        margin-top: 16px;
+        margin-bottom: 15px;
+        text-align: left;
+    
+    }
+    .rates{
+        width: 80%;
+        margin: auto;
+        padding-top: 100px;
+        text-align: center;
+    
+    }
+    
+    
+    .rates h1{
+        color: #fff;
+    }
+    
+    .therates{
+        flex-basis: 44%;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        text-align: left;
+        background: #fff3f3;
+        padding: 25px;
+        cursor: pointer;
+        display: flex;
+    }
+    
+    
+    
+    .therates p{
+        color: orangered;
+    }
+    footer{
+        position:relative;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        background: #111;
+        overflow: hidden;
+      }
+      .main-content{
+        display: inline;
+      }
+      .main-content .box{
+        flex-basis: 50%;
+        padding: 10px 20px;
+      }
+    .main-content h2{
+        margin-top: 10px;
+    }
+      .box h2{
+        font-size: 1.125rem;
+        font-weight: 600;
+        text-transform: uppercase;
+       
+      }
+      .box .content{
+        position: relative;
+      }
+      .box .content:before{
+        position: absolute;
+        content: '';
+        top: -10px;
+        height: 2px;
+        width: 100%;
+        background: #1a1a1a;
+      }
+      .box .content:after{
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 15%;
+        background: #f12020;
+        top: -10px;
+      }
+      .left .content p{
+        text-align: justify;
+      }
+      .left .content .social{
+        margin: 20px 0 0 0;
+      }
+      .left .content .social a{
+        padding: 0 2px;
+      }
+      .left .content .social a span{
+        height: 40px;
+        width: 40px;
+        background: #1a1a1a;
+        line-height: 40px;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+      .left .content .social a span:hover{
+        background: #f12020;
+      }
+      .center .content .fas{
+        font-size: 1.4375rem;
+        background: #1a1a1a;
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+        text-align: center;
+        border-radius: 50%;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      .center .content .fas:hover{
+        background: #f12020;
+      }
+      .center .content .text{
+        font-size: 1.0625rem;
+        font-weight: 500;
+        padding-left: 10px;
+      }
+      .center .content .phone{
+        margin: 15px 0;
+      }
+      .right form .text{
+        font-size: 1.0625rem;
+        margin-bottom: 2px;
+        color: #656565;
+      }
+      .right form .msg{
+        margin-top: 10px;
+      }
+      .right form input:focus,.right form textarea:focus{
+        outline: none;
+        color: white;
+      }
+      .right form input, .right form textarea{
+        width: 50%;
+        max-width: 50%;
+        font-size: 1.0625rem;
+        background: #151515;
+        padding-left: 10px;
+        border: 1px solid #222222;
+      }
+      .right form input:focus,
+      .right form textarea:focus{
+        outline-color: #3498db;
+      }
+      .right form input{
+        height: 35px;
+      }
+      .right form .btn{
+        margin-top: 10px;
+        padding-right: 50px;
+      
+    
+      }
+      .right form .btn button{
+        height: 40px;
+        width: 100%;
+        border: none;
+        outline: none;
+        background: #f12020;
+        font-size: 1.0625rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: .3s;
+       
+      }
+      .right form .btn button:hover{
+        background: #000;
+      }
+      .bottom center{
+        padding: 5px;
+        font-size: 0.9375rem;
+        background: #151515;
+      }
+      .bottom center span{
+        color: #656565;
+      }
+      .bottom center a{
+        color: #f12020;
+        text-decoration: none;
+      } 
+      .bottom center a:hover{
+        text-decoration: underline;
+      }
+    
+        

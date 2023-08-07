@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Aussie</title>
+    
+</head>
+<body>
+    {%load static%}
+    <link rel="stylesheet"  href="{% static 'css/homepage.css'%}">
+
+    <div class="container">
+        <h1>Aussie</h1>
+
+     
+        <div class="navbar" id="naxx">
+            <ul>
+
+                <li>
+                    <input class="search" type="text" placeholder="Search Food">
+                    
+                  </li>
+                <li><a href="">Home</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li>
+                    
+               
+                </li>
+                <li><a  class="sign" href="user_profile.html"> user Profile</a></li>
+                <li><a class="sign" href="Register.html">Register</a></li>
+                <li><a  class="sign" href="user login.html"> User Login</a></li>
+                <li><a class="sign" href="admin.html">Admin Login</a></li>
+            </ul>
+
+        </div>
+
+
+
+    </div>
+    <div class="content">
+        <h3>Welcome To Aussie</h3>
+        <h1>Healthy and Natural Food</h1>
+        <p>It’s true you are what you eat. Foods that contain unnatural ingredients are surprisingly quick to prepare and cheap. But you will pay a heavy price later. So, be mindful about the food choices you make now.</p>
+      <button onclick="redirectToOrderPage()">ORDER NOW</button>
+      
+    </div>
+    <script>
+        function redirectToOrderPage() {
+          window.location.href = "menu.html";
+        }
+        </script>
+
+    <section class="food">
+        <h1>How it Works</h1>
+       <div class="row">
+        <div class="foodcol">
+            <h1>1</h1>
+            <h3>You place your order</h3><br>
+            <p>You choose your order type and you could choose whatever you want from drinks ,breakfast ,lunch dinner or you can compose your sandwich.</p>
+        </div>
+
+        <div class="foodcol">
+            <h1>2</h1>
+            <h3>Food is being coocked</h3><br>
+            <p> the food is beig coocked with best tools to ensure and gurantee the best experiece for our customers and make them happy</p>
+        </div>
+
+        <div class="foodcol">
+            <h1>3</h1>
+            <h3>Order delivery</h3><br>
+            <p>you can order online froom our beloved website or you can come and honor us in our restaurant and wait for your order from 15 to 20 minutes.</p>
+        </div>
+
+      
+
+       </div>
+   </section>
+   <section class="dishes">
+    <h1>Dishes Types</h1>
+    <div class="row">
+        <div class="foodcol2">
+            <img src="{%static 'photos/veget.jpg'%}" alt="">
+            <div class="layer"><h3>
+                Breakfast
+            </h3></div>
+        </div>
+
+        <div class="foodcol2">
+            <img src="{%static 'photos/zzz.jpeg'%}" alt="">
+            <div class="layer"><h3>
+                Lunch
+            </h3></div>
+        </div>
+
+        <div class="foodcol2">
+            <img src="{% static 'photos/ooo.jpg'%}" alt="">
+            <div class="layer"><h3>
+                Dinner
+            </h3></div>
+        </div>
+    </div>
+
+
+   </section>
+   <section class="problems">
+    <h1>Problems we Solve</h1>
+    <p>We Offer The Best Quality With The Best Price.</p>
+
+<div class="row">
+    <div class="foodcol3">
+        <img src="{% static 'photos/ex1.jpeg'%}" alt="">
+        <h3>Is eating healthy really more expensive?</h3>
+        <p>It's a common belief that eating healthy is too expensive. In 2013, the Harvard School of Public Health analyzed 27 studies and found that it cost an average of $1.50 more per day to eat healthy. </p>
+    </div>
+
+    <div class="foodcol3">
+        <img src="{% static 'photos/ppp.jpeg'%}" alt="">
+        <h3>It takes too much time to prepare homemade food?</h3>
+        <p>It's a common belief that eating healthy is too expensive. In 2013, the Harvard School of Public Health analyzed 27 studies and found that it cost an average of $1.50 more per day to eat healthy. </p>
+    </div>
+
+
+
+    <div class="foodcol3">
+        <img src="{%static 'photos/aaa3.jpeg'%}" alt="">
+        <h3>Junk food is really not healthy?</h3>
+        <p>It's a common belief that eating healthy is too expensive. In 2013, the Harvard School of Public Health analyzed 27 studies and found that it cost an average of $1.50 more per day to eat healthy. </p>
+    </div>
+
+
+</div>
+</section>
+<section class="rates">
+    <h1>What Our Customers Says</h1>
+
+
+    <div class="row">
+        <div class="therates">
+          
+            <div>
+                <p>
+                    ting talented homebased cooks with hungry professting talented homebased cooks with hungry professting talented homebased cooks with hungry professting talented homebased cooks with hungry professting talented homebased cooks with hungry profess
+                </p>
+                <h3>Dr.Salwa</h3>
+            </div>
+        </div>
+
+
+        <div class="therates">
+           
+            <div>
+                <p>
+                    ting talented homebased cooks with hungry professting talented homebased cooks with hungry professting talented homebased cooks with hungry professting talented homebased cooks with hungry professting talented homebased cooks with hungry profess
+                </p>
+                <h3>Dr.Ayman</h3>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</section>
+<footer>
+    <div class="main-content">
+      <div class="left box">
+        <h2 style="color: white;">About us</h2>
+        <div class="content">
+          <p> Nothing Bring People Together Like Good Food</p>
+          <div class="social">
+            <a href="https://facebook.com/coding.np"><span class="fab fa-facebook-f"></span></a>
+            <a href="#"><span class="fab fa-twitter"></span></a>
+            <a href="https://instagram.com/coding.np"><span class="fab fa-instagram"></span></a>
+            <a href="https://youtube.com/c/codingnepal"><span class="fab fa-youtube"></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="center box">
+        <h2 style="color: white;">Address</h2>
+        <div class="content">
+          <div class="place">
+            <span class="fas fa-map-marker-alt"></span>
+            <span class="text">Egypt, Cairo</span>
+          </div>
+          <div class="phone">
+            <span class="fas fa-phone-alt"></span>
+            <span class="text">+020-765432100</span>
+          </div>
+          <div class="email">
+            <span class="fas fa-envelope"></span>
+            <span class="text">abc@example.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="right box">
+        <h2 style="color: white;">Contact us</h2>
+        <div class="content">
+          <form action="#">
+            <div class="email">
+              <div class="text">Email *</div>
+              <input type="email" required style="width: 50%;">
+            </div>
+            <div class="msg">
+              <div class="text">Message *</div>
+              <textarea rows="2" cols="10" required ></textarea>
+             
+            </div>
+           
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+     
+      
+        <span style="text-align: center;" class="far fa-copyright"></span><span> 2020 All rights reserved.</span>
+      
+    </div>
+  </footer>
+</body>
+</html>
