@@ -18,11 +18,17 @@ from django.contrib import admin
 from register import views
 from homepage import views
 from django.urls import include, path
-
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/' ,include("register.urls")),
+    path('homepage/' ,include("homepage.urls")),
     path('loginform/',include("loginform.urls")),
     path('',views.home,name='home'),
+    path('menu/',include("menu.urls")),
  
-]
+] 
+if settings.DEBUG:
+     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
