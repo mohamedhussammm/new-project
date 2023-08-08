@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinner</title>
-    <link rel="stylesheet" href="dinner.css">
+    {% load static %}
+
+    <link rel="stylesheet" a href="{% static 'css/dinner.css' %}">
+
+
 </head>
 <body>
     <div class="side_panel">
         <ul>
-            <li><a class="sign" href="drinks.html">Drinks</a></li>
-            <li><a class="sign" href="Breakfast.html">Breakfast</a></li>
-            <li><a class="sign" href="lunch.html">Lunch</a></li>
-            <li><a class="sign" href="dinner.html">Dinner</a></li>
-            <li><a class="sign" href="composes.html">Composes</a></li>
-            <li><a class="sign" href="homepage.html">Home</a></li>
-            <li><a class="sign" href="Check_Out.html">Check_out</a></li>           
+            <li><a class="sign" href="{% url 'itemdrinks' %}">Drinks</a></li>
+            <li><a class="sign" href="{% url 'item' %}">Breakfast</a></li>
+            <li><a class="sign" href="{% url 'itemlunch' %}">Lunch</a></li>
+            <li><a class="sign" href="{% url 'itemdinner' %}">Dinner</a></li>
+            <li><a class="sign" href="{% url 'itemcompose' %}">Composes</a></li>
+            <li><a class="sign" href="{% url 'home' %}">Home</a></li>
+            <li><a class="sign" href="Check_Out.html">Check_out</a></li>          
         </ul>
     </div>
     <div class="right">
@@ -29,7 +33,57 @@
             <div class="searchh">
                 <input class="input" type="text" placeholder="Search Food">                
             </div>
-            <div class="Diner-item" style="position: relative; top: 18px;"> 
+
+            <div class="menu">
+                <div class="menu-item">
+                {% block content %}
+
+
+
+
+
+            {% for x in itemdinner %}
+            <img src="{{x.images.url}}" alt="">
+
+            <h3 class="item-name">  {{x.name}}  <br></h3>
+            <p class="item-components">{{x.components}} <br></p>
+           <p class="item-price"> {{x.price}} <br></p>
+           
+            {% endfor %}
+
+            
+            
+            {% endblock content %}
+
+
+
+        </div>
+
+        </div>
+
+            {% comment %} {% block content %}
+
+
+
+
+
+            {% for z in itemdinner %}
+            
+            <h1>
+                <img src="{{z.images.url}}" alt=""> <br>
+                {{z.name}}  <br>
+                {{z.price}} <br>
+                {{z.components}} <br>
+               
+            </h1>
+            {% endfor %}
+
+            
+            
+            {% endblock content %} {% endcomment %}
+
+
+            {% comment %} <div class="Diner-item" style="position: relative; top: 18px;"> 
                 <img src="Images/dinner.jfif" >
             </div>
             <div class="details-d">
@@ -69,6 +123,6 @@
                 <button class="add">Add</button>
             </div>                           
         </div>
-    </div>
+    </div> {% endcomment %}
 </body>
 </html>

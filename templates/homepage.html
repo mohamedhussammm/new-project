@@ -21,15 +21,15 @@
                     
                   </li>
                 <li><a href="">Home</a></li>
-                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="{% url 'item' %}">Menu</a></li>
                 <li>
                     
                
                 </li>
                 <li><a  class="sign" href="user_profile.html"> user Profile</a></li>
-                <li><a class="sign" href="Register.html">Register</a></li>
-                <li><a  class="sign" href="user login.html"> User Login</a></li>
-                <li><a class="sign" href="admin.html">Admin Login</a></li>
+                <li><a class="sign" href="{% url 'signup'%}">Register</a></li>
+                <li><a  class="sign" href="{% url 'index'%}"> User Login</a></li>
+                <li><a class="sign" href="{% url 'admin_redirect'%}">Admin Login</a></li>
             </ul>
 
         </div>
@@ -41,12 +41,15 @@
         <h3>Welcome To Aussie</h3>
         <h1>Healthy and Natural Food</h1>
         <p>It’s true you are what you eat. Foods that contain unnatural ingredients are surprisingly quick to prepare and cheap. But you will pay a heavy price later. So, be mindful about the food choices you make now.</p>
-      <button onclick="redirectToOrderPage()">ORDER NOW</button>
+
+      
+
+      <button><a href="{% url 'item' %}"></a>ORDER NOW</button>
       
     </div>
     <script>
         function redirectToOrderPage() {
-          window.location.href = "menu.html";
+          window.location.href = "{% url 'item' %}";
         }
         </script>
 
