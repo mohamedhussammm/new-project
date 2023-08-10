@@ -9,6 +9,17 @@
 
     <div class="container">
         <h2>User Login</h2>
+        {% block content  %}
+      
+
+        {% if messages  %}
+        {% comment %} {% if user.is_authenticated %} {% endcomment %}
+        {% for message in messages %}
+        {{message}}
+
+        {% endfor %}    
+        {% endif %}
+        {% endblock content %}
     <form method="POST">
         {% csrf_token %}
         <input type="text" name="username" id="username" placeholder="username" required>

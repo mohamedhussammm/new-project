@@ -19,7 +19,10 @@
             <li><a class="sign" href="{% url 'itemdinner' %}">Dinner</a></li>
             <li><a class="sign" href="{% url 'itemcompose' %}">Composes</a></li>
             <li><a class="sign" href="{% url 'home' %}">Home</a></li>
-            <li><a class="sign" href="Check_Out.html">Check_out</a></li>       
+            <li><a class="sign" href="{% url 'check' %}">Check out</a></li>
+            {% if user.is_authenticated %}
+            <li><a class="sign" href="{% url 'logout' %}">Log Out</a></li>
+            {% endif %}
         </ul>
     </div>
     <div class="right">

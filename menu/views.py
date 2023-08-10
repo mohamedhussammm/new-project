@@ -27,6 +27,9 @@ def itemcompose(request):
     
     return render(request,'menu/composes.html',{'itemcompose':composes.objects.all()})
 
+def checkout(request):
+    return render(request,'menu/checkout.html')
+
 
 
 

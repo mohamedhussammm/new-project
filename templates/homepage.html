@@ -27,6 +27,8 @@
                 <li><a class="sign" href="{% url 'signup'%}">Register</a></li>
                 <li><a  class="sign" href="{% url 'index'%}"> User Login</a></li>
                 <li><a class="sign" href="{% url 'admin_redirect'%}">Admin Login</a></li>
+                
+            
             </ul>
 
         </div>
@@ -34,6 +36,16 @@
 
 
     </div>
+    {% block content  %}
+      
+
+    {% if messages  %}
+    {% for message in messages.tags  %}
+    {{message}}
+
+    {% endfor %}    
+    {% endif %}
+    {% endblock content %}
     <div class="content">
         <h3>Welcome To Aussie</h3>
         <h1>Healthy and Natural Food</h1>
