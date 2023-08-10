@@ -30,9 +30,7 @@
                 <h3>&mdash;Menu info&mdash;</h3>
                 
             </div>
-            <div class="searchh">
-                <input class="input" type="text" placeholder="Search Food">                
-            </div>
+          
 
             <div class="menu">
                 <div class="menu-item">
@@ -43,7 +41,12 @@
 
 
             {% for x in itemdinner %}
-            <img src="{{x.images.url}}" alt="">
+            <div>
+                <button class="btn">Add to cart</button> 
+                <img src="{{x.images.url}}" alt="">
+            </div>
+    
+         
 
             <h3 class="item-name">  {{x.name}}  <br></h3>
             <p class="item-components">{{x.components}} <br></p>

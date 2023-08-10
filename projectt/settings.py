@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [ 
+  
     'register.apps.RegisterConfig',
     'loginform.apps.LoginformConfig',
     'menu.apps.MenuConfig',

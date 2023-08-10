@@ -38,9 +38,6 @@
 
            
 
-            <div class="searchh">
-                <input class="input" type="text" placeholder="Search Food">                
-            </div>
 
 
             <div class="menu">
@@ -52,7 +49,10 @@
 
 
             {% for x in item %}
+            <div>
+            <button class="btn">Add to cart</button> 
             <img src="{{x.images.url}}" alt="">
+        </div>
 
             <h3 class="item-name">  {{x.name}}  <br></h3>
             <p class="item-components">{{x.components}} <br></p>
