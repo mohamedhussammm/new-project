@@ -1,4 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import User
+
+
 
 class items(models.Model):
     name=models.CharField(max_length=30)
@@ -51,8 +54,16 @@ class composes(models.Model):
     images=models.ImageField(upload_to='photos/%y/%m/%d')
     active=models.BooleanField(default=True)
     def __str__(self):
-          return self.name          
+          return self.name  
       
+      
+      
+      
+# class Cart(models.Model):
+#     user = models.ForeignKey(User, on_delete=models.CASCADE)
+#     product = models.ForeignKey(items,drinks,lunch,dinner,composes, on_delete=models.CASCADE)  # Assuming you have a Product model      
+      
+
                   
       
      

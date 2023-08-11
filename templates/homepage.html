@@ -49,7 +49,7 @@
     {% endfor %}    
     {% endif %}
     {% endblock content %}
-    
+
     </div>
     
     <div class="content">
@@ -97,21 +97,42 @@
     <h1>Dishes Types</h1>
     <div class="row">
         <div class="foodcol2">
-            <img src="{%static 'photos/veget.jpg'%}" alt="">
+          
+          {% comment %} <div>
+          <button  class="btn" >Add to cart</button> 
+          <img src="{{x.images.url}}" alt="">
+      </div> {% endcomment %}
+      {% for x in home %}
+
+      <img src="{{x.firstimage.url}}" alt="">
+      {% endfor %}
+
+
             <div class="layer"><h3>
                 Breakfast
             </h3></div>
         </div>
 
         <div class="foodcol2">
-            <img src="{%static 'photos/zzz.jpeg'%}" alt="">
+            {% comment %} <img src="{%static 'photos/zzz.jpeg'%}" alt=""> {% endcomment %}
+            {% for z in home %}
+
+            <img src="{{z.secondimage.url}}" alt="">
+            {% endfor %}
+      
             <div class="layer"><h3>
                 Lunch
             </h3></div>
         </div>
 
         <div class="foodcol2">
-            <img src="{% static 'photos/ooo.jpg'%}" alt="">
+
+            {% comment %} <img src="{% static 'photos/ooo.jpg'%}" alt=""> {% endcomment %}
+            {% for y in home %}
+
+            <img src="{{y.thirdimage.url}}" alt="">
+            {% endfor %}
+      
             <div class="layer"><h3>
                 Dinner
             </h3></div>
@@ -126,13 +147,23 @@
 
 <div class="row">
     <div class="foodcol3">
-        <img src="{% static 'photos/ex1.jpeg'%}" alt="">
+
+        {% comment %} <img src="{% static 'photos/ex1.jpeg'%}" alt=""> {% endcomment %}
+        {% for y in home %}
+
+        <img src="{{y.fourthimage.url}}" alt="">
+        {% endfor %}
         <h3>Is eating healthy really more expensive?</h3>
         <p>It's a common belief that eating healthy is too expensive. In 2013, the Harvard School of Public Health analyzed 27 studies and found that it cost an average of $1.50 more per day to eat healthy. </p>
     </div>
 
     <div class="foodcol3">
-        <img src="{% static 'photos/ppp.jpeg'%}" alt="">
+
+        {% comment %} <img src="{% static 'photos/ppp.jpeg'%}" alt=""> {% endcomment %}
+        {% for y in home %}
+
+        <img src="{{y.fifthimage.url}}" alt="">
+        {% endfor %}
         <h3>It takes too much time to prepare homemade food?</h3>
         <p>It's a common belief that eating healthy is too expensive. In 2013, the Harvard School of Public Health analyzed 27 studies and found that it cost an average of $1.50 more per day to eat healthy. </p>
     </div>
@@ -140,7 +171,12 @@
 
 
     <div class="foodcol3">
-        <img src="{%static 'photos/aaa3.jpeg'%}" alt="">
+
+        {% comment %} <img src="{%static 'photos/aaa3.jpeg'%}" alt=""> {% endcomment %}
+        {% for y in home %}
+
+        <img src="{{y.sixthimage.url}}" alt="">
+        {% endfor %}
         <h3>Junk food is really not healthy?</h3>
         <p>It's a common belief that eating healthy is too expensive. In 2013, the Harvard School of Public Health analyzed 27 studies and found that it cost an average of $1.50 more per day to eat healthy. </p>
     </div>

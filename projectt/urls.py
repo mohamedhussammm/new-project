@@ -26,7 +26,7 @@ urlpatterns = [
     path('register/' ,include("register.urls")),
     path('homepage/' ,include("homepage.urls")),
     path('loginform/',include("loginform.urls")),
-    path('',views.home,name='home'),
+    # path('',views.home,name='home'),
     path('menu/',include("menu.urls")),
     path('',include("homepage.urls")),
   

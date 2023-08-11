@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import items , drinks,lunch,dinner,composes
+from django.contrib.auth.decorators import login_required
+
 
 def item(request):
     
@@ -28,7 +30,14 @@ def itemcompose(request):
     return render(request,'menu/composes.html',{'itemcompose':composes.objects.all()})
 
 def checkout(request):
+    
     return render(request,'menu/checkout.html')
+
+
+
+
+
+
 
 
 
