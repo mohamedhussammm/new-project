@@ -36,16 +36,22 @@
 
 
     </div>
-    {% block content  %}
+    <div class="msg">
+
+
+      {% block content  %}
       
 
     {% if messages  %}
-    {% for message in messages.tags  %}
+    {% for message in messages %}
     {{message}}
 
     {% endfor %}    
     {% endif %}
     {% endblock content %}
+    
+    </div>
+    
     <div class="content">
         <h3>Welcome To Aussie</h3>
         <h1>Healthy and Natural Food</h1>

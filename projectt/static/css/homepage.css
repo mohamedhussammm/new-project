@@ -451,5 +451,20 @@ border-radius: 4px;
       .bottom center a:hover{
         text-decoration: underline;
       }
+      .msg .message{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        background-color: #fff;
+      }
+      .message {
+        background-color: #dff0d8;
+        color: #3c763d;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #d6e9c6;
+        border-radius: 4px;
+      }
     
         

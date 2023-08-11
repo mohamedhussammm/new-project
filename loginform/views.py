@@ -30,8 +30,8 @@ def index(request):
 def logout_view(request):
     logout(request)
     messages.success(request, 'You have been logged out.')
-    # return redirect('logout')
-    return render(request,'loginform/index.html')
+    return redirect('/')
+    # return render(request,'loginform/index.html')
 
     
 
