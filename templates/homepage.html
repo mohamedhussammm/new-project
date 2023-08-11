@@ -59,7 +59,8 @@
 
       
 
-      <button><a href="{% url 'item' %}"></a>ORDER NOW</button>
+      {% comment %} <button><a href="{% url 'item' %}"></a>ORDER NOW</button> {% endcomment %}
+      <button onclick=redirectToOrderPage() >ORDER NOW</button>
       
     </div>
     <script>
