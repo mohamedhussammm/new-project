@@ -1,6 +1,10 @@
 body, html{
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.7) url(../photos/food2.webp) fixed;   
+    background-size: cover;
+    background-blend-mode: darken; 
+    
 }
 
 
@@ -10,7 +14,6 @@ body, html{
     width: 100%;
 }
 #container{
-    border: 1px solid gray;
     overflow-x: hidden;
     overflow-y: auto;
   
@@ -24,24 +27,28 @@ body, html{
     width: 95%;
     height: 70px;
     margin-top: 10px;
+    background-color: orange;
+    border-radius: 10px;
     border: 1px solid black;
     box-shadow: 0 4px 8px 0 rgba(63, 48, 48, 0.445), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     overflow: hidden;
 }
-
+#art:hover{
+    cursor: pointer;
+}
 #art:hover #item_img{
-   
-transform: scale(1.2);
+    cursor: pointer;
+    transform: scale(1.2);
 }
 #art:hover{
     background-color: rgba(91, 128, 28, 0.459);
 }
 #item_img {
     transition: .3s;
-  position: absolute;
+    position: absolute;
   
-  top: 13px;
-  left: 15px;
+    top: 13px;
+    left: 15px;
     width: 10%;
     max-width: 60px;
 
@@ -69,7 +76,7 @@ transition: .3s;
 }
 .im:hover{
     cursor: pointer;
-    background-color: rgba(30, 152, 62, 0.424);
+    background-color: orangered;
 }
 .in_span{
     padding: 9px;
@@ -87,13 +94,17 @@ transition: .3s;
 #prices {
     font-family: Arial, Helvetica, sans-serif;
     border: none;
-    margin-top: 0%;
+    margin-top: 20px;
     width: 100%;
     border-collapse: collapse;
 }
-#prices tr:nth-child(even){background-color: #dce7be;}
+
+#prices tr:nth-child(even){
+    background-color: #dce7be;
+}
+
 #prices tr{
-   
+    background-color: #c5de82;
     border-bottom: 1px solid rgb(28, 16, 16);
 }
 #prices td{
@@ -154,7 +165,7 @@ display: block;
     height: 30px;
     width: 100px;
     color: white;
-    background-color: black;
+    background-color: orange;
 }
 
 
@@ -170,9 +181,10 @@ display: block;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     width: 300px;
+    background-color: #dce7be;
     border: 1px solid black;
-border-radius: 8px;
-transition: .3s;
+    border-radius: 8px;
+    transition: .3s;
     
 }
 .dropdown {
@@ -230,7 +242,7 @@ display: block;
     margin-top: 10px;
     border: none;
     border-bottom: 1px solid black;
-    background-color: green;
+    background-color: orange;
     color: white;
     margin-bottom: 5px;
     margin-left: -8px;
@@ -248,7 +260,7 @@ display: block;
     outline: none;
 }
 #end:hover{
-    background-color: rgb(3, 57, 3);
+    background-color: green;
 }
 @media only screen and (min-width:1000px) {
     #v1{
