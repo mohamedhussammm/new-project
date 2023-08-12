@@ -44,6 +44,13 @@
        
 
         <input type="file" id="picture" name="picture"required>
+
+        {% if messages  %}
+        {% for message in messages %}
+        {{message}}
+
+        {% endfor %}    
+        {% endif %}
        
            <b> <button type="submit" >Sign Up </button></b> <br><br>
            <div class="account">

@@ -1,6 +1,5 @@
 from imaplib import _Authenticator
 from django.shortcuts import redirect, render
-from .models import Login
 from register.models import signuppage
 from django.contrib.auth import logout
 from django.contrib.auth import authenticate, login,logout
