@@ -20,7 +20,14 @@ def signup(request):
     cpassword=request.POST.get("cpassword")
     nationalid=request.POST.get("nationalid")
     picture=request.POST.get("picture")
-    if signuppage.objects.filter(email=email).exists():
+    if signuppage.objects.filter(email=email).exists() and signuppage.objects.filter(username=username).exists():
+       messages.success(request, 'Email already exists.      ')
+       messages.success(request, 'Username already exists.')
+       return render(request,'register/signup.html')
+    elif signuppage.objects.filter(username=username).exists():
+       messages.success(request, 'Username already exists.')
+       return render(request,'register/signup.html')
+    elif signuppage.objects.filter(email=email).exists():
        messages.success(request, 'Email already exists.')
        return render(request,'register/signup.html')
     else:

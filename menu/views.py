@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
-from .models import items , drinks,lunch,dinner,composes
+from .models import items , drinks,lunch,dinner,composes,Cart,CartItem
 from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
+import json
 
 
 def item(request):
@@ -32,6 +34,20 @@ def itemcompose(request):
 def checkout(request):
     
     return render(request,'menu/checkout.html')
+
+
+def add_to_cart(request):
+    data = json.loads(request.body)
+    product_id = data["id"]
+    product = drinks.objects.get(id=product_id)
+    if request.user.is_authenticated:
+        cart, created = Cart.objects.get_or_create(user=request.user, completed=False)
+        cartitem, created =CartItem.objects.get_or_create(cart=cart, drink=product)
+        cartitem.quantity += 1
+        cartitem.save()
+    return JsonResponse("working", safe=False)
+
+    
 
 
 
