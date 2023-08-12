@@ -53,13 +53,7 @@ class composes(models.Model):
       
       
       
-     
-<<<<<<< HEAD
-=======
-# class Cart(models.Model):
-#     user = models.ForeignKey(User, on_delete=models.CASCADE)
-#     product = models.ForeignKey(items,drinks,lunch,dinner,composes, on_delete=models.CASCADE)  # Assuming you have a Product model      
->>>>>>> 1bc5eedfcc148ecd0e19860fdcb93b6e20e22a29
+ 
       
 
                   
