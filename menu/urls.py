@@ -8,6 +8,7 @@ urlpatterns = [
     path('dinner/',views.itemdinner,name="itemdinner"),
     path('composes/',views.itemcompose,name="itemcompose"),
     path('checkout/',views.checkout,name="check"),
+    
   
 
 
