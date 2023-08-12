@@ -11,6 +11,13 @@
     
 
 </head>
+<script>
+    function passvalues(){
+        var pass = document.getElementById("button").value;
+        localStorage.setItem("item",pass);
+        return false;
+    }
+</script>
 <body>
     <div class="side_panel">
         <ul>
@@ -44,13 +51,14 @@
 
 
 
-
-            {% for x in itemdrinks %}
-            <div>
-                <button class="btn">Add to cart</button> 
-                <img src="{{x.images.url}}" alt="">
-            </div>
-    
+                <form action="{% url 'check'%}">
+                    {% for x in itemdrinks %}
+                    <div>
+                        <button class="btn" id="button" onclick="passvalues()">Add to cart</button> 
+                        <img src="{{x.images.url}}" alt="">
+                    </div>
+                </form>                    
+            
 
             <h3 class="item-name">  {{x.name}}  <br></h3>
             <p class="item-components">{{x.components}} <br></p>
