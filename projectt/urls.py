@@ -29,6 +29,7 @@ urlpatterns = [
     # path('',views.home,name='home'),
     path('menu/',include("menu.urls")),
     path('',include("homepage.urls")),
+    path('checkout/',include("checkout.urls"))
   
  
 ] 
