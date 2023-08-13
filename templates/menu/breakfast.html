@@ -64,9 +64,9 @@
 
             {% for x in item %}
             <div>
-            <button  class="btn" >Add to cart</button> 
-            <img src="{{x.images.url}}" alt="">
-        </div>
+                <button class="btn" id="button" onclick=" passvalues(' {{x.name}},{{x.components}},{{x.price}},{{x.images}} ')"><a href="http://127.0.0.1:8000/menu/checkout/">Add to cart</a></button> 
+                <img src="{{x.images.url}}" alt="">
+            </div>
 
             <h3 class="item-name">  {{x.name}}  <br></h3>
             <p class="item-components">{{x.components}} <br></p>
@@ -184,5 +184,20 @@
             </div>                
         </div>
     </div> {% endcomment %}
+    <script>
+       
+        function passvalues(name,components,price, images){        
+            let obj ={}
+            let arr = name.split(",")
+            obj.name = arr[0]
+            obj.components = arr[1]
+            obj.price= arr[2]
+            obj.images= arr[3]
+            console.log(obj);
+    
+            fetch("http://127.0.0.1:8000/menu/checkout/",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(obj)}).then(res=>console.log(res)).catch(err=>console.log(err))
+            
+        }
+    </script>
 </body>
 </html>
