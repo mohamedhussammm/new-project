@@ -1,10 +1,13 @@
 from django.shortcuts import render,redirect
-from .models import items , drinks,lunch,dinner,composes
+from .models import items , drinks,lunch,dinner,composes,Cart,CartItem
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from .models import Checkout
 import json
+from django.http import JsonResponse
 @csrf_exempt
+
+
 
 def item(request):
     # print(items.objects(0))
@@ -94,6 +97,26 @@ def checkout(request):
         print(result[0].images)
         print("ahmed")
         return render(request,"menu/checkout.html",{'items':result})
+    
+    return render(request,'menu/checkout.html')
+
+
+def add_to_cart(request):
+    data = json.loads(request.body)
+    product_id = data["id"]
+    product = drinks.objects.get(id=product_id)
+    if request.user.is_authenticated:
+        cart, created = Cart.objects.get_or_create(user=request.user, completed=False)
+        cartitem, created =CartItem.objects.get_or_create(cart=cart, drink=product)
+        cartitem.quantity += 1
+        cartitem.save()
+    return JsonResponse("working", safe=False)
+
+    
+
+
+
+
 
 
 def menu_view(request):
