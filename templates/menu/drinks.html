@@ -10,13 +10,7 @@
     <link rel="stylesheet" a href="{% static 'css/drinks.css' %}">
 
 </head>
-<script>
-    function passvalues(){
-        var pass = document.getElementById("button").value;
-        localStorage.setItem("item",pass);
-        return false;
-    }
-</script>
+
 <body>
     <div class="side_panel">
         <ul>
@@ -50,13 +44,13 @@
 
 
 
-                <form action="{% url 'check'%}">
+                
                     {% for x in itemdrinks %}
                     <div>
-                        <button class="btn" id="button" onclick="passvalues()">Add to cart</button> 
+                        <button class="btn" id="button" onclick=" passvalues(' {{x.name}},{{x.components}},{{x.price}},{{x.images}} ')"><a href="http://127.0.0.1:8000/menu/checkout/">Add to cart</a></button> 
                         <img src="{{x.images.url}}" alt="">
                     </div>
-                </form>                    
+                            
             
 
             <h3 class="item-name">  {{x.name}}  <br></h3>
@@ -129,5 +123,21 @@
             </div>
         </div>
     </div> {% endcomment %}
+
+    <script>
+       
+        function passvalues(name,components,price, images){        
+            let obj ={}
+            let arr = name.split(",")
+            obj.name = arr[0]
+            obj.components = arr[1]
+            obj.price= arr[2]
+            obj.images= arr[3]
+            console.log(obj);
+    
+            fetch("http://127.0.0.1:8000/menu/checkout/",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(obj)}).then(res=>console.log(res)).catch(err=>console.log(err))
+            
+        }
+    </script>
 </body>
 </html>
